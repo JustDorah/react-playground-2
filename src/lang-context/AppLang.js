@@ -13,7 +13,10 @@ export default class AppLang extends Component {
     this.setState({ lang });
   };
   render() {
-    const contextValue = { lang: this.state.lang };
+    const contextValue = {
+      lang: this.state.lang,
+      setLang: this.handleSetLang
+    };
     return (
       // <LanguageContext.Provider
       //   value={{
