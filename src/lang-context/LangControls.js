@@ -18,19 +18,28 @@ export default function LangControls(props) {
                   we are disabling the currently selected language button which happens to be 'en-US' */
         return (
           <>
-            <button disabled={value.lang === "en-GB"}>
+            <button
+              onClick={() => props.onSetLang("en-GB")}
+              disabled={value.lang === "en-GB"}
+            >
               British{" "}
               <span role="img" aria-label="en-GB">
                 🇬🇧
               </span>
             </button>{" "}
-            <button disabled={value.lang === "en-US"}>
+            <button
+              onClick={() => props.onSetLang("en-US")}
+              disabled={value.lang === "en-US"}
+            >
               American{" "}
               <span role="img" aria-label="en-US">
                 🇺🇸
               </span>
             </button>{" "}
-            <button disabled={value.lang === "ko"}>
+            <button
+              onClick={() => props.onSetLang("ko")}
+              disabled={value.lang === "ko"}
+            >
               Korean{" "}
               <span role="img" aria-label="ko">
                 🇰🇷
