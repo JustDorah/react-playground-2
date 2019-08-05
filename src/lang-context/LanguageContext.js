@@ -5,9 +5,10 @@ import React from "react";
 const LanguageContext = React.createContext({
   lang: window.navigator.language,
   setLang: () => {}
-  //If setLang not there.. then...
-  //Uncaught TypeError: _this.context.setLang is not a function
+  //If setLang not there.. then... app crashes.. contextNotes
+  //Uncaught TypeError: _this.context.setLang is not a function 
   // We need the updater function in place, even when it isn't doing anything, just to prevent any potential explosions inside our app.
+  //In a more broad concept of programming, this is called a "contract".
 });
 
 export default LanguageContext;
